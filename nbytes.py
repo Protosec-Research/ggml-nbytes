@@ -10,12 +10,10 @@ GGML_MAX_DIMS = 4
 
 def ggml_blck_size(type_name):
     trait = type_traits[type_name]
-    # Handle string block sizes (like 'QK4_0') by using a default of 32
     return 32 if isinstance(trait['blck_size'], str) else trait['blck_size']
 
 def ggml_type_size(type_name):
     trait = type_traits[type_name]
-    # Handle string type sizes (like 'sizeof(block_q4_0)') by using a default of 32
     return 32 if isinstance(trait['type_size'], str) else trait['type_size']
 
 def ggml_nbytes(ne, nb, type_name):
