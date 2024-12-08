@@ -90,13 +90,13 @@ def main():
             return
 
         # Save results to JSON file with timestamp
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"reverse_ggml_analysis_{timestamp}.json"
+        # timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        # filename = f"reverse_ggml_analysis_{timestamp}.json"
         
-        with open(filename, 'w') as f:
-            json.dump(results, f, indent=2)
+        # with open(filename, 'w') as f:
+        #     json.dump(results, f, indent=2)
         
-        print(f"\n{Fore.GREEN}Results saved to: {filename}{Style.RESET_ALL}")
+        # print(f"\n{Fore.GREEN}Results saved to: {filename}{Style.RESET_ALL}")
 
     except ValueError as e:
         print(f"{Fore.RED}Error: Please enter valid numbers{Style.RESET_ALL}")
